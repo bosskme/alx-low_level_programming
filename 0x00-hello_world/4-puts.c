@@ -4,7 +4,7 @@
 int main(void)
 /* Program body */
 {
-  puts("\"Programming is like building a multilingual puzzle");
-  /*Return */
-  return (0);
+puts("\"Programming is like building a multilingual puzzle");
+/*Return */
+return(0);
 }
