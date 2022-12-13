@@ -1,4 +1,3 @@
-#include "main.h"
 
 /**
  * main - Entry point
@@ -7,7 +6,7 @@
  *
  */
 
-int main()
+int main(void)
 {
         putchar('_');
         putchar ('p');
