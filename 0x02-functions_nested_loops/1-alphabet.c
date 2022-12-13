@@ -1,18 +1,19 @@
-#include <stdio.h>
+#include <unistd.h>
+#include "main.h"
 
 /**
- * print_alphabet - prints alphabet
- *
- * Return: always 0;
- *
+ * main - Check description
+ * Description: It prints the word Holberton, followed by a new line.
+ * Return: 0.
  */
-void print_alphabet(void)
+int main(void)
 {
-	char i;
+	char word[9] = "Holberton";
+	int i;
 
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		_putchar(i);
-	}
+	for (i = 0; i < 9; i++)
+		_putchar(word[i]);
 	_putchar('\n');
+
+	return (0);
 }
