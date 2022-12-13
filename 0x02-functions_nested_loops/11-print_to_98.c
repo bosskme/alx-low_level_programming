@@ -2,6 +2,12 @@
 #include "6-abs.c"
 #include <stdio.h>
 
+/**
+ * main - entry point
+ *
+ * Return: On success 0.
+ */
+
 void print_to_98(int n)
 {
 	int i;
