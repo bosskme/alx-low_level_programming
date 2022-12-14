@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _islower - main function
+ * print_times_table - prints the n times table, starting with 0
  *
- * @c: character to compare
+ * @n: number of the times table
  *
  * Return: 1 if true, 0 if false
  *
