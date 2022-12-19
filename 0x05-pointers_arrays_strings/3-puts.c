@@ -5,12 +5,7 @@
  * 
  * Return: Always 0.
  */
-void _puts(char *str);
-int main(void)
+void _puts(char *str)
 {
-	char *str;
-
-	str = "I do not fear computer. I fear the lack of them - Isaac Asimov";
-	_puts(str);
-	return (0);
+  printf("%s\n" , str);
 }
