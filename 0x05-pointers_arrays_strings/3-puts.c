@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * main - check the code
- * 
- * Return: Always 0.
- */
+  * _puts - Prints a string
+  * @str: The string to print
+  *
+  * Return: void
+  */
 void _puts(char *str)
 {
-  printf("%s\n" , str);
+	printf("%s\n" , str);
 }
