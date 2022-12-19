@@ -2,15 +2,19 @@
 #include <stdio.h>
 
 /**
-  * print_rev - Prints a string in reverse
-  * @s: The string to print
+  * _puts - Prints a string
+  * @str: The string to print
   *
   * Return: void
   */
-void print_rev(char *s)
-{
-  int len = strlen(str);
-  for (int i = len - 1; i >= 0; --i) {
-    printf("%c\n", str[i]);
+
+void print_rev(char *s) {
+
+int len = strlen(s); // Determine the length of the string
+
+for (int i = len - 1; i >= 0; i--) { // Iterate through string from the end to beginning
+printf("%c", s[i]); // Print character at each iteration
 }
+
+printf("\n"); // Print new line at end of loop
 }
