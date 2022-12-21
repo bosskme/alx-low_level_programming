@@ -1,1 +1,1 @@
-0x03 C debugging readme file
+0x06. C - More pointers, arrays and strings
