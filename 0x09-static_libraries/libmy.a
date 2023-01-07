@@ -1,20 +1,20 @@
-int _putchar(char c);
-int _islower(int c);
-int _isalpha(int c);
-int _abs(int n);
-int _isupper(int c);
-int _isdigit(int c);
-int _strlen(char *s);
-void _puts(char *s);
-char *_strcpy(char *dest, char *src);
-int _atoi(char *s);
-char *_strcat(char *dest, char *src);
-char *_strncat(char *dest, char *src, int n);
-char *_strncpy(char *dest, char *src, int n);
-int _strcmp(char *s1, char *s2);
-char *_memset(char *s, char b, unsigned int n);
-char *_memcpy(char *dest, char *src, unsigned int n);
-char *_strchr(char *s, char c);
-unsigned int _strspn(char *s, char *accept);
-char *_strpbrk(char *s, char *accept);
-char *_strstr(char *haystack, char *needle);
+gcc -c _putchar.c
+gcc -c _islower.c
+gcc -c _isalpha.c
+gcc -c _abs.c
+gcc -c _isupper.c
+gcc -c _isdigit.c
+gcc -c _strlen.c
+gcc -c _puts.c
+gcc -c _strcpy.c
+gcc -c _atoi.c
+gcc -c _strcat.c
+gcc -c _strncat.c
+gcc -c _strncpy.c
+gcc -c _strcmp.c
+gcc -c _memset.c
+gcc -c _memcpy.c
+gcc -c _strchr.c
+gcc -c _strspn.c
+gcc -c _strpbk.c
+gcc -c _strstr.c
