@@ -1,89 +1,73 @@
-#include "main.h"
 #include <stdlib.h>
-#include <string.h>
-
 /**
-  * strtow - ...
-  * @str: ...
-  *
-  * Return: ...
-  */
-
-char **strtow(char *str) {
-    // check for invalid input
-    if (!str || !*str) {
-        return NULL;
-    }
-
-    // allocate memory for the array of strings
-    int num_words = 0;
-    char **result = malloc(sizeof(char *));
-    if (!result) {
-        return NULL; // allocation failed
-    }
-
-    // split the input string into words
-    char *word_start = str;
-    while (*str) {
-        if (*str == ' ') {
-            // found the end of a word, add it to the result array
-            int word_len = str - word_start;
-            result[num_words] = malloc((word_len + 1) * sizeof(char));
-            if (!result[num_words]) {
-                // free previously allocated memory and return NULL
-                for (int i = 0; i < num_words; i++) {
-                    free(result[i]);
-                }
-                free(result);
-                return NULL;
-            }
-            memcpy(result[num_words], word_start, word_len);
-            result[num_words][word_len] = '\0'; // null-terminate the string
-            num_words++;
-
-            // reallocate memory for the array of strings
-            result = realloc(result, (num_words + 1) * sizeof(char *));
-            if (!result) {
-                // free previously allocated memory and return NULL
-                for (int i = 0; i < num_words; i++) {
-                    free(result[i]);
-                }
-                free(result);
-                return NULL;
-            }
-
-            // move on to the next word
-            word_start = str + 1;
-        }
-        str++;
-    }
-
-    // add the last word to the result array
-    int word_len = str - word_start;
-    result[num_words] = malloc((word_len + 1) * sizeof(char));
-    if (!result[num_words]) {
-        // free previously allocated memory and return NULL
-        for (int i = 0; i < num_words; i++) {
-            free(result[i]);
-        }
-        free(result);
-        return NULL;
-    }
-    memcpy(result[num_words], word_start, word_len);
-    result[num_words][word_len] = '\0'; // null-terminate the string
-    num_words++;
-
-    // add a NULL element to the end of the array
-    result = realloc(result, (num_words + 1) * sizeof(char *));
-    if (!result) {
-        // free previously allocated memory and return NULL
-        for (int i = 0; i < num_words; i++) {
-            free(result[i]);
-        }
-        free(result);
-        return NULL;
-    }
-    result[num_words] = NULL;
-
-    return result;
+ * strtow - char
+ * @str: pointer to string params
+ * Return: char
+ */
+char **strtow(char *str)
+{
+int i = 0, j = 0, k = 0;
+int len = 0, count = 0;
+char **f, *col;
+if (!str || !*str)
+{
+return (NULL);
+}
+while (*(str + i))
+{
+if (*(str + i) != ' ')
+{
+if (*(str + i + 1) == ' ' || *(str + i + 1) == 0)
+{
+count += 1;
+}
+}
+i++;
+}
+if (count == 0)
+{
+return (NULL);
+}
+count += 1;
+f = malloc(sizeof(char *) * count);
+if (!f)
+{
+return (NULL);
+}
+i = 0;
+while (*str)
+{
+while (*str == ' ' && *str)
+{
+str++;
+}
+len = 0;
+while (*(str + len) != ' ' && *(str + len))
+{
+len += 1;
+}
+len += 1;
+col = malloc(sizeof(char) * len);
+if (!col)
+{
+for (k = j - 1; k >= 0; k--)
+{
+free(f[k]);
+}
+free(f);
+return (NULL);
+}
+for (k = 0; k < (len - 1);  k++)
+{
+*(col + k) = *(str++);
+}
+*(col + k) = '\0';
+*(f + j) = col;
+if (j < (count - 1))
+{
+j++;
+}
+}
+*(f + j) = NULL;
+return (f);
 }
